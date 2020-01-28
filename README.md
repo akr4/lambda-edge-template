@@ -16,10 +16,10 @@ A template for Lambda@Edge projects
 │   │   │           └── index.ts
 │   │   └── staging
 │   │       └── behavior1
-│   │   │       ├── origin-response
-│   │   │       │   └── index.ts
-│   │   │       └── viewer-request
-│   │   │           └── index.ts
+│   │           ├── origin-response
+│   │           │   └── index.ts
+│   │           └── viewer-request
+│   │               └── index.ts
 │   └── template
 │       └── behavior1
 │           ├── origin-response

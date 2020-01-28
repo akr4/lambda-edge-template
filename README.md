@@ -69,7 +69,7 @@ entry: {
 
   production_behavior1_viewer_request: path.resolve(__dirname, 'src/env/production/behavior1/viewer-request/indets'),
   production_behavior1_origin_response: path.resolve(__dirname, 'src/env/production/behavior1/origin-response/index.ts'),
-  },
+},
 ```
 
 ## Build

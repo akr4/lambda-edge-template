@@ -48,7 +48,7 @@ export const makeHandler = (config: { bucket_name: string }) => {
 
 ### env directory
 
-`env` directory contains Lambda@Edge handler functions for each environment, behavior, and trigger such as viewer-request. Basically it just generate a handler function by using a template function.
+`env` directory contains Lambda@Edge handler functions for each environment, behavior, and trigger such as viewer-request. Basically it just generates a handler function by using a template function.
 
 ```typescript
 import { makeHandler } from '../../../../template/behavior1/origin-response';

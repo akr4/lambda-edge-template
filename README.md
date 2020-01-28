@@ -38,7 +38,7 @@ Templates are higher-order functions that return a Lambda@Edge handler function.
 
 For example, the following template function `makeHandler` accepts s3 bucket name and returns a handler function that uses the bucket.
 
-```
+```typescript
 export const makeHandler = (config: { bucket_name: string }) => {
   return async (event: CloudFrontResponseEvent): Promise<CloudFrontResponseResult> => {
     // get from the bucket
@@ -50,7 +50,7 @@ export const makeHandler = (config: { bucket_name: string }) => {
 
 `env` directory contains Lambda@Edge handler functions for each environment, behavior, and trigger such as viewer-request. Basically it just generate a handler function by using a template function.
 
-```
+```typescript
 import { makeHandler } from '../../../../template/behavior1/origin-response';
 
 export const handler = makeHandler({
@@ -62,7 +62,7 @@ export const handler = makeHandler({
 
 `webpack.config.js` is where to configure what to build. The below is an example that makes viewer-requst and origin-response handler functions for staging and production environment.
 
-```
+```javascript
 entry: {
   staging_behavior1_viewer_request: path.resolve(__dirname, 'src/env/staging/behavior1/viewer-request/index.ts'),
   staging_behavior1_origin_response: path.resolve(__dirname, 'src/env/staging/behavior1/origin-response/index.ts')

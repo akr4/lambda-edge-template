@@ -1,3 +1,4 @@
+test
 # lambda-edge-template
 
 A template for Lambda@Edge projects
